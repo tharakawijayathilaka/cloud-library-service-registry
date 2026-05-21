@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: service-registry
+  config:
+    import: 'configserver:${CONFIG_SERVER_URL:http://localhost:9000}'
+  cloud:
+    config:
+      uri: ${CONFIG_SERVER_URL:http://localhost:9000}
+      fail-fast: false
